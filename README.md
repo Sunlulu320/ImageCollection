@@ -1,2 +1,2 @@
 # ImageCollection
-To insert in
+To insert in Markdown Docs
