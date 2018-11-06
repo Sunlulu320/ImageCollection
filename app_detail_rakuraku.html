@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtmlmobile12.dtd">
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<style>
+	@charset "utf-8";
+* {
+	word-wrap: break-word;
+	-webkit-text-size-adjust:100%;
+}
+
+html, body {
+	height: 100%;
+}
+
+html {
+	font-size: 90%;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.4rem;
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","ＭＳ Ｐゴシック",sans-serif;
+	color: #3C3C3C;
+}
+
+#wrapper {
+	background-color: #FFF;
+	max-width: 798px;
+	margin: 0px auto;
+}
+
+div.contentArea {
+	margin: 1px 15px 15px 15px;
+	overflow: hidden;
+}
+
+.appNameData {
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.5em;
+}
+
+.appNameData p {
+	margin: 0;
+	padding: 0;
+}
+
+h2.title {
+	margin: 0;
+	padding: 0;
+	padding: 24px 0;
+	font-size: 13px;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+div.appPolicyMsg {
+	color: #323232;
+	padding-left: 1.0em;
+	padding-right: 1.0em;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+p.policyTitle {
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+ol {
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.5em;
+	margin: 5px auto;
+	padding-left: 1.5em;
+}
+
+ol.list_parentheses{
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.5em;
+	margin: 5px auto;
+	padding-left: 1.5em;
+}
+
+ol.list_parentheses li{
+	list-style-type:none;
+	list-style-position:inside;
+	padding-left: 1.8em;
+	text-indent: -1.8em;
+	counter-increment: cnt;
+}
+ol.list_parentheses li:before{
+	display: marker;
+	content: "(" counter(cnt) ") ";
+}
+
+hr.borderLine {
+	border-width: 1px 0px 0px 0px;
+	border-style: dashed;
+	border-color: #CCCCCC;
+	height: 1px;
+	margin: 15px 0;
+}
+
+div.appDetail {
+	font-size: 10px;
+	font-size: 1.0rem;
+	margin: 10px 0;
+	line-height: 1.5em;
+}
+
+.bottomPadding17 {
+	padding-bottom: 17px;
+}
+
+.bottomMargin15 {
+	margin-bottom: 15px;
+}
+
+.comments {
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.5em;
+}
+
+.subcomments {
+	font-size: 10px;
+	font-size: 1.0rem;
+	line-height: 1.5em;
+	padding: 1.0em;
+}
+
+p.reset {
+	margin: 0;
+	padding: 0;
+}
+
+.bottomBorder {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.topMargin10 {
+	margin-top: 10px;
+}
+
+.bottomMargin10 {
+	margin-bottom: 10px
+}
+
+.accordionContent label {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	padding-right: 30px;
+	font-size: 10px;
+	font-size: 1.0rem;
+	font-weight: bold;
+	border-top: 1px solid #CCCCCC;
+	line-height: 1.5em;
+}
+
+.accordionContent label::after {
+	content: "+";
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -7px;
+	color: #CCC;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.accordionContent input {
+	display: none;
+}
+
+.accordionContent article.openArea {
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	transition:
+		height 0.1s ease-in-out,
+		box-shadow 0.1s linear;
+}
+
+.accordionContent input:checked + article.openArea {
+	height: 100%;
+}
+
+.default {
+	list-style: disc;
+	padding-left: 1.0em;
+}
+
+@media screen and (min-width:600px) {
+	.appNameData {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	h2.title {
+		padding: 36px 0;
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
+
+	.comments,
+	.subcomments {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	.accordionContent label {
+		padding-top: 29px;
+		padding-bottom: 29px;
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	p.policyTitle {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	ol {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	ol.list_parentheses{
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	div.appDetail {
+		font-size: 16px;
+		font-size: 1.6rem;
+		margin: 15px 0 0 0;
+	}
+
+	.accordionContent label:after {
+		margin-top: -9px;
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
+
+	.bottomPadding17 {
+		padding-bottom: 29px;
+	}
+}
+	</style>
+
+</head>
+
+<body class="detailNormal">
+
+<div id="wrapper">
+
+	<div class="contentArea">
+
+		<div class="appNameData bottomPadding17">
+			<p>株式会社NTTドコモ（以下、「当社」といいます。）は、当社が提供するスマートフォン用アプリケーション「dメニュー」（以下、「本アプリケーション」といいます。）及び本アプリケーションに関するサービス（以下、「本サービス」といいます。）を通じて、お客様の利用者情報をご提供いただき、本サービスの円滑な提供を実施させていただくために、アプリケーション・プライバシーポリシーを定め、利用者情報の保護に努めます。</p>
+			<p>なお、お客様が本アプリケーションによる利用者情報の提供をご希望されない場合は、お客様ご自身のご判断により、一部の利用者情報の提供を拒否することができます。この場合、本アプリケーション及び本サービスをご使用になれない場合がありますので、予めご了承ください。</p>
+		</div>
+
+		<div class="division4 bottomBorder">
+
+			<section class="accordionContent">
+				<div>
+					<label for="appAccordion1">1．端末の外部に送信する利用者情報と利用目的</label>
+					<input id="appAccordion1" name="accordion1" type="checkbox" />
+					<article class="openArea">
+						<div class="appPolicyMsg bottomMargin15">
+							<div class="comments">当社は、本アプリケーション及び本サービスの提供等にあたり、次の利用目的の達成に必要な範囲で下記に記載する利用者情報を、アプリケーション経由で自動的に取得またはお客様の手入力により登録していただき取得し、取扱います。</div>
+
+							<p class="policyTitle">■利用する利用者情報<p>
+							<ol>
+								<li>端末識別ID（プッシュ通知を行うために必要となる端末を識別するためのID）</li>
+								<li>プッシュ通知ON/OFF設定</li>
+								<li>お客様の本アプリケーション上での行動履歴</li>
+							</ol>
+
+							<hr class="borderLine">
+
+							<p class="policyTitle">■取得方法<p>
+
+							<div class="comments">
+							<p class="reset">1～3についてはアプリケーションにより自動的に取得します。</p>
+							<p class="reset">※1.の利用者情報は、プッシュ通知がONの場合に取得します。</p>
+						</div>
+
+						<hr class="borderLine">
+
+						<p class="policyTitle">■利用者情報の利用目的</p>
+						<ol>
+							<li>
+								プッシュ通知機能の提供のため
+								<br>上記利用者情報のうち、1～2.を利用します。
+							</li>
+							<li>
+								ニュースの配信、話題の情報やお役立ち情報の配信、サービス品質の向上、当社のプライバシーポリシーに定める商品・サービス・キャンペーン・イベント等のご案内のため、
+								<br>上記利用者情報のうち、3.を利用します。また、本目的のために当社は3.と下記の利用者情報を組み合わせて利用することがあります。
+								<ul class="default">
+									<li>お客様の契約者情報の一部<p class="reset">（ドコモサービスの契約状況などを含みます。氏名・電話番号・メールアドレスなど個人特定性の高い情報は含みません）</p></li>
+									<li>お客様のウェブ上での行動履歴<p class="reset">（当社の利用するクッキーを介して記録される行動履歴）</p></li>
+									<li>当社の提供するその他のアプリケーション、及び当社の提携先が提供するその他のアプリケーション上でのお客様の行動履歴											</li>
+								</ul>
+							</li>
+							<li>
+								サービス品質改善、各種分析・調査実施のため
+								<br>上記利用者情報のうち、1～3.を利用します。
+							</li>
+						</ol>
+				</div>
+				</article>
+		</div>
+
+		<div>
+			<label for="appAccordion2">2．第三者提供</label>
+			<input id="appAccordion2" name="accordion2" type="checkbox" />
+			<article class="openArea">
+				<div class="appPolicyMsg bottomMargin15">
+					<div class="comments">
+						当社は、次の利用目的の達成に必要な範囲で、以下の利用者情報を、グーグル株式会社に提供します。
+						<br>お客様が当社によるGoogle Analyticsを用いたお客様の情報の利用を望まない場合には、本アプリケーションをご利用頂けません。なお、Google Analyticsによるデータ使用の詳細は、<a href="http://www.google.com/intl/ja/policies/privacy/partners/">こちら</a>をご参照ください。
+					</div>
+
+					<p class="policyTitle">■利用する利用者情報</p>
+					<ol>
+						<li>お客様の本アプリケーション上での行動履歴</li>
+					</ol>
+
+					<hr class="borderLine">
+
+					<p class="policyTitle">■利用者情報の利用目的</p>
+					<ol>
+						<li>
+							ご利用状況の分析、各種施策実施のための分析及び当該施策の効果測定、新サービス企画のための分析、サービス品質改善、その他各種分析・調査実施のため
+							<br>上記利用者情報のうち、1.を利用します。
+						</li>
+					</ol>
+					<hr class="borderLine">
+					<div class="comments topMargin10 bottomMargin10">当社は、利用者情報を次の各号のいずれかに該当すると認める場合は、本人の権利利益に最大限の配慮を払いつつ、個人情報を第三者に提供する場合があります。</div>
+
+					<ol>
+						<li>本人から同意を得た場合</li>
+						<li>法令に基づく場合</li>
+						<li>人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難である場合</li>
+						<li>公衆衛生の向上又は児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難である場合</li>
+						<li>国の機関もしくは地方公共団体又はその委託を受けたものが、法令の定めにより遂行することに協力する必要がある場合であって、本人の同意を得ることによりその遂行に支障を及ぼすおそれがある場合</li>
+						<li>その他、個人情報保護法により第三者提供が認められている場合</li>
+						<li>利用者情報を個人が識別されない形式のデータに加工した場合</li>
+					</ol>
+					</ol>
+
+				</div>
+			</article>
+		</div>
+
+		<div>
+			<label for="appAccordion3">3．利用者情報の取得・蓄積・利用に関する同意</label>
+			<input id="appAccordion3" name="accordion3" type="checkbox" />
+			<article class="openArea">
+				<div class="appPolicyMsg bottomMargin15">
+					<div class="comments">本アプリケーション及び本サービスは本アプリケーション・プライバシーポリシーをご確認いただき、内容を理解したうえでご利用ください。ご利用者は本アプリケーションをインストールする際に、本アプリケーション・プライバシーポリシーをご確認ください。</div>
+				</div>
+			</article>
+		</div>
+
+		<div>
+			<label for="appAccordion4">4．利用者情報の取得停止等</label>
+			<input id="appAccordion4" name="accordion4" type="checkbox" />
+			<article class="openArea">
+				<div class="appPolicyMsg bottomMargin15">
+					<div class="comments">本アプリケーション及び本サービスは、お客様が、本アプリケーションの削除（アンインストール）機能を利用して端末より削除（アンインストール）された場合、利用者情報は全て端末より直ちに削除され、本サービス上のサーバからは適切な管理のもと定期的なメンテナンス時に廃棄されます。
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<div>
+			<label for="appAccordion5">5．本アプリケーション・プライバシーポリシーの公開</label>
+			<input id="appAccordion5" name="accordion5" type="checkbox" />
+			<article class="openArea">
+				<div class="appPolicyMsg bottomMargin15">
+					<div class="comments">本アプリケーション・プライバシーポリシーは、本アプリケーション及び本サービスのみに適用されます。本アプリケーション・プライバシーポリシーは本アプリケーションの設定画面に公開いたします。本アプリケーション及び本サービスからリンクする当社以外の事業者の外部URLアドレス、又は個人のURLアドレス等における利用者情報の取扱いについては、当社は責任を負いかねます。</div>
+				</div>
+			</article>
+		</div>
+
+		<div>
+			<label for="appAccordion6">6．利用者情報の取り扱いに関する問い合わせ窓口</label>
+			<input id="appAccordion6" name="accordion6" type="checkbox" />
+			<article class="openArea">
+				<div class="appPolicyMsg bottomMargin15">
+					<div class="comments">当社ホームページに掲載の窓口までご連絡くださいますようお願いします。</div>
+					<div class="comments">■掲載箇所：ドコモのホームページ ＞ お客様サポート ＞ お問い合わせ</div>
+					<div class="comments">■お問い合わせは<a href="https://www.nttdocomo.co.jp/smt/support/inquiry/index.html">こちら</a></div>
+				</div>
+			</article>
+		</div>
+
+		<div>
+			<label for="appAccordion7">7．本アプリケーション・プライバシーポリシーの変更</label>
+			<input id="appAccordion7" name="accordion7" type="checkbox" />
+			<article class="openArea">
+				<div class="appPolicyMsg bottomMargin15">
+					<div class="comments">当社が必要と判断した場合には、お客様にあらかじめ通知することなくいつでも本アプリケーション・プライバシーポリシーを変更することができるものとします。ただし、ご利用いただいているお客様に大きな影響を与える場合には、あらかじめ合理的な事前告知期間を設けるものとします。</div>
+				</div>
+			</article>
+		</div>
+
+		</section>
+
+	</div><p class="comments" style="float:right;">以上</p><!-- division4ここまで -->
+
+</div><!-- contentAreaここまで -->
+
+</div><!-- wrapperここまで -->
+
+</body>
+
+</html>
